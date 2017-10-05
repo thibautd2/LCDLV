@@ -1,6 +1,6 @@
 package tests;
 
-import application.CofeeMachine;
+
 import application.Costumer;
 import application.CofeeMachine.BEVARAGE;
 
@@ -32,7 +32,7 @@ public class OrderTest extends TestCase {
         assertEquals("H::",costumer.order(BEVARAGE.chocolate, 0, false));
     }
 
-    public void testOrderOrangeJuice()
+    public void testOrder_OrangeJuice()
     {
         Costumer costumer = new Costumer(0.6f);
 

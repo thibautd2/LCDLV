@@ -11,7 +11,7 @@ import java.util.Map;
 public class CofeeMachine implements BeverageQuantityChecker, EmailNotifier{
 
     private static float total;
-    static HashMap<BEVARAGE, Integer> report;
+    private static HashMap<BEVARAGE, Integer> report;
 
     @Override
     public void notifyMissingDrink(String drink) {
@@ -87,7 +87,7 @@ public class CofeeMachine implements BeverageQuantityChecker, EmailNotifier{
         return price;
     }
 
-    public static String  show_Message(String messageContent) {
+    public static String show_Message(String messageContent) {
         String message = "M:";
         return message + messageContent;
     }
