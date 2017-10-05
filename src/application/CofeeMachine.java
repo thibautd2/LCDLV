@@ -1,18 +1,28 @@
 package application;
+import application.supply.BeverageQuantityChecker;
+import application.supply.EmailNotifier;
 
-import javafx.util.Pair;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by thiba on 05/10/2017.
  */
-public class CofeeMachine {
+public class CofeeMachine implements BeverageQuantityChecker, EmailNotifier{
 
     private static float total;
     static HashMap<BEVARAGE, Integer> report;
+
+    @Override
+    public void notifyMissingDrink(String drink) {
+
+    }
+
+    @Override
+    public boolean isEmpty(String drink) {
+        return false;
+    }
+
 
     public enum BEVARAGE {
         tea {
@@ -59,7 +69,7 @@ public class CofeeMachine {
         System.out.println("Total :" + total);
     }
 
-    public static float getPrice(CofeeMachine.BEVARAGE bevarage) {
+    private static float getPrice(CofeeMachine.BEVARAGE bevarage) {
         float price = 0;
         switch (bevarage) {
             case chocolate:

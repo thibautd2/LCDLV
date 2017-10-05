@@ -16,8 +16,6 @@ public class ReportTest extends TestCase {
         costumer.order(CofeeMachine.BEVARAGE.orangeJuice, 5, true);
         costumer.order(CofeeMachine.BEVARAGE.chocolate, 0, false);
         CofeeMachine.printReport();
-
-        
     }
 
 

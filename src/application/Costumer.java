@@ -26,12 +26,14 @@ public class Costumer {
         String suggar = "";
         String stick = "";
 
+
+
         float beveragePrice = getPrice(bevarage);
 
         if(extraHot && bevarage != BEVARAGE.orangeJuice)
             order +="h";
 
-        if (bevarage == BEVARAGE.orangeJuice || suggarAmmont < 0)
+        if (suggarAmmont < 0 || bevarage == BEVARAGE.orangeJuice )
             suggarAmmont = 0;
 
         if (suggarAmmont > 0) {

@@ -31,15 +31,6 @@ public class OrderTest extends TestCase {
         assertEquals("H::",costumer.order(BEVARAGE.chocolate, 0, false));
     }
 
-    public void testOrder_with_Suggar() throws Exception {
-        Costumer costumer = new Costumer(20);
-
-        assertEquals("T:1:0",costumer.order(BEVARAGE.tea, 1, false));
-        assertEquals("H:2:0",costumer.order(BEVARAGE.chocolate, 2, false));
-        assertEquals("C:2:0",costumer.order(BEVARAGE.cofee, 158, false));
-    }
-
-
     public void testOrderOrangeJuice()
     {
         Costumer costumer = new Costumer(0.6f);
@@ -51,6 +42,15 @@ public class OrderTest extends TestCase {
         assertEquals("M:",costumer.order(BEVARAGE.orangeJuice, 0, false).substring(0,2));
 
     }
+
+    public void testOrder_with_Suggar() throws Exception {
+        Costumer costumer = new Costumer(20);
+
+        assertEquals("T:1:0",costumer.order(BEVARAGE.tea, 1, false));
+        assertEquals("H:2:0",costumer.order(BEVARAGE.chocolate, 2, false));
+        assertEquals("C:2:0",costumer.order(BEVARAGE.cofee, 158, false));
+    }
+
 
     public void testExtraHot()
     {
