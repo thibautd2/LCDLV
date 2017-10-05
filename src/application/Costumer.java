@@ -1,35 +1,14 @@
 package application;
+import application.CofeeMachine.*;
+
+import static application.CofeeMachine.getPrice;
+import static application.CofeeMachine.registerOrder;
+import static application.CofeeMachine.show_Message;
 
 /**
  * Created by thiba on 05/10/2017.
  */
 public class Costumer {
-
-
-    public enum BEVARAGE {
-        tea {
-            public String toString() {
-                return "T";
-            }
-        },
-        cofee {
-            public String toString() {
-                return "C";
-            }
-        },
-        chocolate {
-            public String toString() {
-                return "H";
-            }
-        },
-        orangeJuice {
-            public String toString() {
-                return "O";
-            }
-        }
-
-    }
-
 
     private float money;
 
@@ -42,32 +21,12 @@ public class Costumer {
     }
 
 
-    public float getPrice(BEVARAGE bevarage) {
-        float price = 0;
-        switch (bevarage) {
-            case chocolate:
-                price = 0.5f;
-                break;
-            case cofee:
-                price = 0.6f;
-                break;
-            case tea:
-                price = 0.4f;
-                break;
-            case orangeJuice:
-                price = 0.6f;
-                break;
-        }
-        return price;
-    }
-
-
     public String order(BEVARAGE bevarage, Integer suggarAmmont, Boolean extraHot) {
         String order = bevarage.toString();
         String suggar = "";
         String stick = "";
-        float beveragePrice = getPrice(bevarage);
 
+        float beveragePrice = getPrice(bevarage);
 
         if(extraHot && bevarage != BEVARAGE.orangeJuice)
             order +="h";
@@ -87,15 +46,12 @@ public class Costumer {
             return show_Message("Need : " + change + "");
         } else {
             money -= beveragePrice;
+            registerOrder(beveragePrice, bevarage);
         }
         order = order + ":" + suggar + ":" + stick;
         return order;
     }
 
-    public String show_Message(String messageContent) {
-        String message = "M:";
-        return message + messageContent;
-    }
 
 
     public float getMoney() {
