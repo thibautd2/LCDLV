@@ -1,5 +1,6 @@
 package tests;
 
+import application.CofeeMachine;
 import application.Costumer;
 import application.CofeeMachine.BEVARAGE;
 

@@ -8,7 +8,6 @@ Création d'un projet intellij 15h58
 
 2eme itération 16h45
 
-
 fin de la deuxieme itération 17h15
 
 Debut 3eme itération: 17h20
@@ -17,3 +16,4 @@ fin 3eme itération 17h42
 
 Debut 4eme itération 17h45
 
+10 minutes break;

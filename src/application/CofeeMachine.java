@@ -48,7 +48,6 @@ public class CofeeMachine implements BeverageQuantityChecker, EmailNotifier{
 
     }
 
-
     public static void registerOrder(float price, BEVARAGE bevarage)
     {
         total+=price;
@@ -69,7 +68,7 @@ public class CofeeMachine implements BeverageQuantityChecker, EmailNotifier{
         System.out.println("Total :" + total);
     }
 
-    private static float getPrice(CofeeMachine.BEVARAGE bevarage) {
+    public static float getPrice(CofeeMachine.BEVARAGE bevarage) {
         float price = 0;
         switch (bevarage) {
             case chocolate:
